@@ -9,7 +9,7 @@ def main():
   ties = 0
   losses = 0
   #Create a loop that continues as long as the user wants to play.
-  playAgain = "Y"
+playAgain = "Y"
 while playAgain == "Y":
   #User can play as many games as they wish.
   #Randomly choose the computer between 'R', 'P', 'S'
@@ -22,17 +22,14 @@ while playAgain == "Y":
   elif computer == "P":   
     print("computer chose paper")
   else:
-    print("player chose scissors")  
+    print("computer chose scissors")  
   if player == "R":
     print("player chose Rock")
   elif player == "P":   
-    print("computer chose paper")
+    print("player chose paper")
   else:
     print("player chose scissors")  
   #In the end, print the stats
-  print("Wins \t Ties \t Losses")
-  print("---- \t ---- \t ------")
-  print(wins, "\t", ties , "\t", losses)
 if player == "R" and computer == "R":
   print("Tie")
   ties = ties + 1
@@ -42,25 +39,29 @@ if player == "R" and computer == "P":
 if player == "R" and computer == "S":
    print("You win!")
    wins = wins + 1
- if player == "S" and computer == "S":
-  print(Tie)
+if player == "S" and computer == "S":
+  print("Tie")
   ties = ties + 1
 if player == "S" and computer == "R":
   print("Computer wins.")
-  loses = loses + 1
+  losses = losses + 1
 if player == "S" and computer == "P":
    print("You win!")
    wins = wins + 1       
- if player == "P" and computer == "P":
-  print(Tie)
+if player == "P" and computer == "P":
+  print("Tie")
   ties = ties + 1
 if player == "P" and computer == "S":
   print("Computer wins.")
-  loses = loses + 1
+  losses = losses + 1
 if player == "P" and computer == "R":
    print("You win!")
    wins = wins + 1  
+   print("Wins \t Ties \t Losses")
+   print("---- \t ---- \t ------")
+   print(wins, "\t", ties, "\t", losses) 
 # Ask user if they want to play again
-playAgain = input("Play again? (Y/N):")   
+
+playAgain = input("Play again? (Y/N):" )   
 if __name__ == '__main__':
   main()
